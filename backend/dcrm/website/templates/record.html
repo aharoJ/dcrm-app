@@ -1,0 +1,34 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Customer Record</h1>
+{% comment %} FROM VIEWS {% endcomment %} {% comment %} return render(request,
+"record.html", {"customer_record": customer_record}) {% endcomment %}
+{{customer_record}}
+<br />
+<br />
+<br />
+<br />
+<div class="card">
+  <div class="card-header">
+    {{ customer_record.first_name }} {{ customer_record.last_name }}
+  </div>
+  <div class="card-body">
+    <strong>Email: </strong>{{ customer_record.email }} <br />
+    <strong>Phone: </strong>{{ customer_record.phone }} <br />
+    <strong>Address: </strong>
+        {{ customer_record.address }} 
+        {{ customer_record.city }} 
+        {{ customer_record.state }} 
+        {{ customer_record.zipcode }} 
+    <br />
+    <strong>Created: </strong>{{ customer_record.created_at|date:"M d, Y H:i" }} <br />
+    <strong>ID: </strong>{{ customer_record.id }} <br />
+  </div>
+</div>
+
+<br/>
+<br/>
+<a href="{% url 'home' %}" class="btn btn-secondary"> Back </a>
+<a href="{% url 'update_customer_record' customer_record.id %}" class="btn btn-secondary"> Update Profile </a>
+<a href="{% url 'delete_customer_record' customer_record.id %}" class="btn btn-danger"> Delete </a>
+
+{% endblock %}
