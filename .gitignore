@@ -1,3 +1,6 @@
+
+.env*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -172,3 +175,6 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+.DS_Store
+dcrm/mydb.py
+dcrm/dcrm/settings.py
