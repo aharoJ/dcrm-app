@@ -178,3 +178,4 @@ cython_debug/
 .DS_Store
 dcrm/mydb.py
 dcrm/dcrm/settings.py
+backend-template_pattern.zip
